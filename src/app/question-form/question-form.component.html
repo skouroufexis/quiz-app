@@ -1,11 +1,21 @@
-<div class="quiz" *ngIf="question">
-    <h1>{{question.label}}</h1>
-    <form [formGroup]="form">
-      <div class="form-group">
-        <label *ngFor="let choice of question.choices">
-          <input type="radio" [value]="choice" formControlName="choice">
-          <span>{{choice.value}}</span>
-        </label>
-      </div>
-    </form>
+
+
+
+<div class="quiz container" *ngIf="question">
+    <div class="row">
+      <h1>{{question.label}}</h1>
+    </div>
+    
+    <div class="row">
+      <form [formGroup]="form" class="col-12">
+        <div class="form-group row">
+          
+          <label *ngFor="let choice of question.choices" class="col-12">
+            <input type="radio" [value]="choice" formControlName="choice">
+            <span> &nbsp;&nbsp; {{choice.value}}</span>
+          </label>
+        </div>
+      </form>
+    </div>
+    
   </div>
