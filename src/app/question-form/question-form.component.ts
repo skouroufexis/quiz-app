@@ -25,4 +25,5 @@ export class QuestionFormComponent implements OnInit {
   onChange = () => {
     this.onChoiceMade.emit(this.form.value.choice);
   }
+
 }
