@@ -1,0 +1,24 @@
+<div class="results container">
+    <div class="row">
+      <div class="col-12">
+        <h2>Results</h2>
+      </div>
+    </div>
+    
+    
+      <div class="row" *ngFor="let a of answers.values" [ngClass]="{correct: a.correct}">
+        <div class="col-3 answer ">{{a.value}}</div><div class="col-1 tick"><i class="fas fa-check-circle"></i></div>
+      </div>
+
+      
+      
+
+    
+    
+
+    <div class="row">
+      <a routerLink="/welcome"> <button>Choose another quiz</button></a>
+    </div>
+    
+  </div>
+
